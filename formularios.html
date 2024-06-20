@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pesquisa de Satisfação</title>
+    </head>
+    <body>
+        <h1>Pesquisa de Satisfação</h1>
+        <fomr action="pesquisa-satisfacao.html" method="POST">
+            <section>
+                <h2>Dados Pessoais</h2>
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" required/>
+                    </p>
+                    <p>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="exemplo@exemplo.com" required/>             
+                    </p>
+                    <p>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" placeholder="(xx)xxxxx-xxxx" required/>
+                    </p>
+            </section>
+            <section>
+                <h2>Pesquisa de Satisfação</h2>
+                <p>
+                    <h3>Você está satisfeito com o atendimento prestado por nossa loja?</h3>
+                    <label>
+                        <input type="radio" name="pergunta-1">
+                        Não Satisfeito
+                    </label>
+                    <label>
+                        <input type="radio" name="pergunta-1">
+                        Pouco Satisfeito
+                    </label>
+                    <label>
+                        <input type="radio" name="pergunta-1">
+                        Satisfeito
+                    </label>
+                    <label>
+                        <input type="radio" name="pergunta-1">
+                        Muito Satisfeito
+                    </label>
+         
+                </p>
+                <p>
+                    <h3>Você nos recomendaria para seus contatos?</h3>
+                    <label>
+                        <input type="radio" name="recomenda">
+                        Não Recomendaria
+                    </label>
+                    <label>
+                        <input type="radio" name="recomenda">
+                        Recomendaria
+                    </label>
+                </p>
+                <p>
+                    <h3>Em qual dia da semana você prefere fazer compras?</h3>
+                    <label for="dia">Dia da Semana</label>
+                    <select id="dia">
+                        <option>Domingo</option>
+                        <option>Segunda-feira</option>
+                        <option>Terça-feira</option>
+                        <option>Quarta-feira</option>
+                        <option>Quinta-Feira</option>
+                        <Option>Sexta-feira</Option>
+                        <option>Sábado</option>
+                    </select>
+                </p>
+                </section>
+                <p>
+                    <label>
+                        <input type="checkbox" required>Li e aceito os termos de uso
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox">Concordo em compartilhar minhas respostas com terceiros
+                    </label>
+                </p>
+                <input type="submit" value="Enviar">
+        </fomr>
+    </body>
+</html>
