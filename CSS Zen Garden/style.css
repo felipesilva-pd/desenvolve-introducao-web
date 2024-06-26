@@ -2,11 +2,54 @@
 .fonte { color: #A63F03}
 .destaque { color: #731702} */
 
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+#zen-intro {
+    height: 550px;
+}
+#design-archives {
+    display: none;
+}
+header {
+    background-color: #A63F03;
+    color:#F2E3B6;
+}
+#zen-intro header h1, h2 {
+    display: inline-block;
+}
+#zen-intro header h1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+aside ul {
+    list-style-type: none;
+}
+aside ul li {
+    margin: 1em;
+    text-align: center;
+}
+footer {
+    margin: 4%;
+
+}
+.main footer a {
+    border: solid 2px #A63F03;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+
+
 html {
     background: #F2E3B6;
     color: #A63F03;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 p {
     text-indent: 1em;
