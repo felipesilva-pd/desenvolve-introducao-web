@@ -47,7 +47,7 @@ abbr {
 }
 #design-selection {
     position: absolute;
-    top: 550px;
+    top: 540px;
     left: 62%;
     padding-left: 2%;
     padding-right: 2%;
@@ -79,6 +79,7 @@ aside ul li {
 }
 footer {
     margin: 4%;
+    text-align: center;
 
 }
 .main footer a {
@@ -87,5 +88,51 @@ footer {
     display: inline-block;
 }
 
+/*1. Aplique o flexbox no rodapé da seção principal, e posicione os links de forma que fique centralizados e com espaçamento entre eles.
+- Defina um mesmo tamanho para os links.
+- Não se esqueça de tratar o caso de quebra de linha.
+2. Configure um layout de flexbox para a seção de benefícios da seguinte forma:
+- O texto deve ficar à esquerda, e o título à direita.
+- O título deve ficar centralizado verticalmente.
+- O texto deve ocupar aproximadamente 70% da largura, e o título 30%.
+3. Configure um layout de flexbox para a seção de participação da seguinte forma:
+- Cada item deve ocupar 50% do espaço disponível.
+- O título deverá ficar centralizado verticalmente.
+4. Inclua uma linha no topo e embaixo das seções de benefícios e participação, utilizando a propriedade border-bottom e border-top respectivamente.
+- Remova a ocorrência de borda duplicada entre as duas seções*/
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.benefits {
+    display: flex;
+    border-bottom: solid 1px;
+    border-top: solid 1px;
+}
+.benefits h3 {
+    align-self: center;
+    order: 2;
+    flex-basis: 30%;
+}
+.benefits > p {
+    order: 1;
+    flex-basis: 70%;
+}
 
 
+.participation {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 1px;
+}
+.participation  h3 {
+    flex-basis: 50%;
+    align-self: center;
+}
+
+.participation  p {
+    flex-basis: 50%;
+}
