@@ -49,6 +49,7 @@ abbr {
     position: absolute;
     top: 480px;
     left: 62%;
+    width: 34%;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -168,7 +169,7 @@ a:visited {
 
 .main p:first-of-type::first-letter {
     font-size: 3em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     float: left;
 }
 
@@ -180,4 +181,54 @@ a:visited {
     border-bottom: #1f295c solid 1px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+/* 1. Crie uma media query para telas inferiores a 768 pixels; nós a utilizaremos como layout mobile.
+2. Realize as seguintes mudanças para o layout mobile:
+- Remova o reposicionamento do menu de design para que ele se encaixe no mesmo lugar de antes.
+- Remova a borda lateral ao lado da div
+- Mude a orientação do Flexbox presente no elemento para vertical, e organize os elementos de forma empilhada
+- Remova a altura fixa presente no cabeçalho da página
+- Remova também o espaçamento inicial dado a cada um dos parágrafos
+Vamos Deixar nossa página mais adequada a mídia de impressão também!
+1. Crie uma media query para meios impressos, mas sem qualquer tipo de restrição relacionada a tela
+2. Adicione as seguintes modificações a essa media query: 
+- Altere o estilo da fonte para uma serifada, como times .
+- Inverta as cores do banner para que o fundo fique claro (assim como o restante da página)*/
+
+@media screen and (max-width: 768px) {
+    #design-selection {
+       position: static;
+       width: 100%;
+    }
+    .explanation {
+        width:100%;
+        border-right: none;
+    }
+    #zen-intro {
+        height: auto;
+    }
+    .participation {
+        flex-direction: column;
+    }
+    p { text-indent: 0%;
+    }
+}
+
+@media print {
+   html { 
+    font-family: 'Times New Roman', Times, serif;
+}
+header {
+    background-color: #F2E3B6;
+    color:#A63F03;
+}
+#design-selection {
+    position: static;
+    width: 100%;
+ }
+ .explanation {
+     width:100%;
+     border-right: none;
+ }
 }
